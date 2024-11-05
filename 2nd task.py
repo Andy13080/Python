@@ -12,7 +12,7 @@ with open('books.csv', 'r', encoding='windows-1251', newline='') as csvfile:
 
         date_string = row[6]
         try:
-            date = datetime.strptime(date_string, "%d.%m.%Y %H:%M")  # Adjust the format if needed
+            date = datetime.strptime(date_string, "%d.%m.%Y %H:%M")  
             year = date.year
             if year in target_year:
                 extracted_years.append(year)

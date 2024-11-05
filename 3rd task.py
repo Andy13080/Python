@@ -2,14 +2,14 @@ from csv import reader
 
 output = open('bibliographic_references.txt', 'w')
 
-# Create a generator function to yield bibliographic references
+
 def generate_bibliographic_references():
     with open('books.csv', 'r', encoding='windows-1251') as csvfile:
         table = reader(csvfile, delimiter=';')
 
         for i, row in enumerate(table):
             if i >= 20:
-                break   # Stop after 20 entries
+                break   
             author = row[row[3]]
             name = row[row[1]]
             year = row[row[6]]
