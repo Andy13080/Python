@@ -1,6 +1,6 @@
 from csv import reader
 
-counts = 0  
+count = 0  
 
 with open('books-en.csv', 'r') as csvfile:
     table = reader(csvfile, delimiter=';')
@@ -13,4 +13,4 @@ with open('books-en.csv', 'r') as csvfile:
             except ValueError:
                 print(f'Invalid price: {row[6]}')
 
-print('Total number is: ', counts)
+print('Total number is: ', count)
